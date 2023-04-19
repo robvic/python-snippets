@@ -1,5 +1,5 @@
 # About
-Code to implement speech recognition using local microphone and Google API to text conversion. I requires at least a working device and internet connection. Adjustments on ambient noise, voice detection threshold and timeout can be made.
+Code to implement speech recognition using local microphone and Google API to text conversion. It requires at least a working device and internet connection. Adjustments on ambient noise, voice detection threshold and timeout can be made.
 # Packages
 - PyAudio
 - Speech_Recognition
