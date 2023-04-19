@@ -4,10 +4,14 @@ import speech_to_text as stt
 
 class TestSpeechToText(unittest.TestCase):
 
+    def test_identify_microphone(self):
+        device_index = stt.identify_microphone()
+        self.assertIsNotNone(device_index)
+
     @patch('speech_to_text.sr.Microphone')
     @patch('speech_to_text.sr.Recognizer.listen')
     def test_record_audio(self, mock_listen, mock_microphone):
-        audio = stt.record_audio()
+        audio = stt.record_audio(0)
         self.assertIsNotNone(audio)
         mock_microphone.assert_called_once()
         mock_listen.assert_called_once()
